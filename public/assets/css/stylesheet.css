@@ -7,16 +7,29 @@ body {
   align-items: center;
   margin: 0;
 }
+
+/* Square loaders */
+
+/* shared properties */
 .loader {
   width: 5em;
   height: 5em;
-  animation: loaderAnim 1.5s infinite;
+  animation: loaderAnim 1.25s infinite;
 }
+@keyframes loaderAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+/* Blue Square */
 .loader #largeBox {
   height: 5em;
   width: 5em;
   background-color: #447bd9;
-  animation: largeBoxAnim 1.5s alternate infinite ease-in-out;
+  animation: largeBoxAnim 1.25s alternate infinite ease-in-out;
   position: fixed;
 }
 .loader #mediumBox {
@@ -25,39 +38,14 @@ body {
   background-color: #66cef2;
   outline: 1px solid transparent;
   position: fixed;
-  animation: medBoxAnim 1.5s alternate infinite ease-in-out;
+  animation: medBoxAnim 1.25s alternate infinite ease-in-out;
 }
 .loader #smallBox {
   height: 5em;
   width: 5em;
   background-color: #78f9ff;
   position: fixed;
-  animation: smallBoxAnim 1.5s alternate infinite ease-in-out;
-}
-.loader #altLargeBox{
-  height: 5em;
-  width: 5em;
-  background-color: #9135ec;
-  position: fixed;
-  animation-delay: 1.5s;
-  animation: altLargeBoxAnim 1.5s alternate infinite ease-in-out;
-  animation-delay: 1.5s;
-}
-.loader #altMediumBox{
-  height: 5em;
-  width: 5em;
-  background-color: #c07bfe;
-  position: fixed;
-  animation: altMediumBoxAnim 1.5s alternate infinite ease-in-out;
-  animation-delay: 1.5s;
-}
-.loader #altSmallBox{
-  height: 5em;
-  width: 5em;
-  background-color: #d8b2fb;
-  position: fixed;
-  animation: altSmallBoxAnim 1.5s alternate infinite ease-in-out;
-  animation-delay: 1.5s;
+  animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
 }
 @keyframes smallBoxAnim {
   0% {
@@ -83,35 +71,45 @@ body {
     transform: scale(1);
   }
 }
-@keyframes loaderAnim {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
+
+/* Purple Square */
+.loader #altSmallBox{
+  height: 5em;
+  width: 5em;
+  background-color: #d8b2fb;
+  position: fixed;
+  animation: altSmallBoxAnim 1.25s alternate infinite ease-in-out;
+  animation-delay: 1.25s;
+  z-index: 1;
 }
-@keyframes altLargeBoxAnim {
+.loader #altMediumBox{
+  height: 5em;
+  width: 5em;
+  background-color: #c07bfe;
+  position: fixed;
+  animation: altMediumBoxAnim 1.25s alternate infinite ease-in-out;
+  animation-delay: 1.25s;
+  z-index: 1;
+}
+.loader #altLargeBox{
+  height: 5em;
+  width: 5em;
+  background-color: #9135ec;
+  position: fixed;
+}
+@keyframes altSmallBoxAnim {
   0% {
-    transform: scale(0);
+    transform: scale(0.2);
   }
   100% {
-    transform: scale(1);
+    transform: scale(0.35);
   }
 }
 @keyframes altMediumBoxAnim {
   0% {
-    transform: scale(0);
+    transform: scale(0.4);
   }
   100% {
-    transform: scale(0.75);
-  }
-}
-@keyframes altSmallBoxAnim {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(0.5);
+    transform: scale(0.66);
   }
 }
