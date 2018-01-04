@@ -113,3 +113,27 @@ body {
     transform: scale(0.66);
   }
 }
+
+/* muti square */
+.loaderTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  animation: loaderAnimTwo 2s infinite;
+}
+@keyframes loaderAnimTwo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+#multiSquare{
+  background-color: #ffdb4d;
+  height: 2em;
+  width: 2em;
+}
