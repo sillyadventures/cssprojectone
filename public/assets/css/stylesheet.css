@@ -11,28 +11,21 @@ body {
 /* Square loaders */
 
 /* shared properties */
-.loader {
+
+/* Blue Square */
+.loaderOne {
   width: 5em;
   height: 5em;
-  animation: loaderAnim 1.25s infinite;
+  animation: loaderAnimOne 1.25s infinite;
 }
-@keyframes loaderAnim {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
-/* Blue Square */
-.loader #largeBox {
+.loaderOne #largeBox {
   height: 5em;
   width: 5em;
   background-color: #447bd9;
   animation: largeBoxAnim 1.25s alternate infinite ease-in-out;
   position: fixed;
 }
-.loader #mediumBox {
+.loaderOne #mediumBox {
   height: 5em;
   width: 5em;
   background-color: #66cef2;
@@ -40,12 +33,20 @@ body {
   position: fixed;
   animation: medBoxAnim 1.25s alternate infinite ease-in-out;
 }
-.loader #smallBox {
+.loaderOne #smallBox {
   height: 5em;
   width: 5em;
   background-color: #78f9ff;
   position: fixed;
   animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+}
+@keyframes loaderAnimOne {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 @keyframes smallBoxAnim {
   0% {
@@ -73,7 +74,12 @@ body {
 }
 
 /* Purple Square */
-.loader #altSmallBox{
+.loaderTwo {
+  width: 5em;
+  height: 5em;
+  animation: loaderAnimTwo 1.25s infinite;
+}
+.loaderTwo #altSmallBox{
   height: 5em;
   width: 5em;
   background-color: #d8b2fb;
@@ -82,7 +88,7 @@ body {
   animation-delay: 1.25s;
   z-index: 1;
 }
-.loader #altMediumBox{
+.loaderTwo #altMediumBox{
   height: 5em;
   width: 5em;
   background-color: #c07bfe;
@@ -91,11 +97,19 @@ body {
   animation-delay: 1.25s;
   z-index: 1;
 }
-.loader #altLargeBox{
+.loaderTwo #altLargeBox{
   height: 5em;
   width: 5em;
   background-color: #9135ec;
   position: fixed;
+}
+@keyframes loaderAnimTwo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 @keyframes altSmallBoxAnim {
   0% {
@@ -115,25 +129,30 @@ body {
 }
 
 /* muti square */
-.loaderTwo {
+.multigroup {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+}
+.loaderThree {
+  display: flex;
+  flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  width: 2em;
-  height: 2em;
-  animation: loaderAnimTwo 2s infinite;
+  width: 1.5em;
+  height: 1.5em;
+  animation: loaderAnimThree 2s alternate infinite ease-in-out;
+  animation-delay: 1.25s;
 }
-@keyframes loaderAnimTwo {
+@keyframes loaderAnimThree {
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(180deg);
+    transform: rotate(270deg);
   }
 }
 #multiSquare{
   background-color: #ffdb4d;
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
 }
