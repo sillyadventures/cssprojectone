@@ -72,6 +72,7 @@ body {
     transform: scale(1);
   }
 }
+/* blue square end */
 
 /* Purple Square */
 .loaderTwo {
@@ -127,6 +128,7 @@ body {
     transform: scale(0.66);
   }
 }
+/* purple square end */
 
 /* muti square */
 .multigroup {
@@ -163,4 +165,59 @@ body {
   animation: colorchangeOne 10s infinite;
   height: 1.5em;
   width: 1.5em;
+}
+/* multi square end */
+.loaderFourPlanet {
+  height: 9em;
+  width: 9em;
+}
+@keyframes loaderAnimPlanetRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#planetSquare {
+  background-color: #4DCB93;
+  transform: scale(0.4);
+  border-radius: 25%;
+  height: 9em;
+  width: 9em;
+  position: fixed;
+  z-index: 2;
+  animation: colorchangePlanet 18s linear infinite;
+}
+@keyframes colorchangePlanet {
+      0%   {background: #4DCB93;}
+      10%  {background: #839F89;}
+      30%  {background: #4A4B4C;}
+      50%  {background: #021639;}
+      70%  {background: #39858D;}
+      90%  {background: #73E8FF;}
+      100% {background: #4DCB93;}
+}
+#planetRing {
+  background-color: black;
+  height: 9em;
+  width: 9em;
+  position: fixed;
+  animation: loaderAnimRingRotate 18s linear infinite;
+}
+#planetRingInside {
+  background-color: white;
+  transform: scale(0.7);
+  height: 9em;
+  width: 9em;
+  z-index: 1;
+  border-radius: 50%;
+}
+@keyframes loaderAnimRingRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
