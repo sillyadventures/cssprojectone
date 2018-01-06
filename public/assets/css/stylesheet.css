@@ -183,32 +183,24 @@ body {
 #planetSquare {
   background-color: #4DCB93;
   transform: scale(0.4);
-  border-radius: 25%;
+  border-radius: 15%;
   height: 9em;
   width: 9em;
   position: fixed;
   z-index: 4;
   animation: colorchangePlanet 18s linear infinite, loaderAnimPlanetRotate 18s linear infinite;
 }
-@keyframes planetSize {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(0.4);
-  }
-}
 @keyframes colorchangePlanet {
-      0%   {background: #4DCB93;}
-      10%  {background: #839F89;}
-      30%  {background: #4A4B4C;}
-      50%  {background: #021639;}
+      0%   {background: #265E25;}
+      10%  {background: #254C49;}
+      30%  {background: #7A5E56;}
+      50%  {background: #605C4E;}
       70%  {background: #39858D;}
       90%  {background: #73E8FF;}
-      100% {background: #4DCB93;}
+      100% {background: #265E25;}
 }
 #planetRing {
-  background-color: black;
+  background-color: #282529;
   height: 9em;
   width: 9em;
   position: fixed;
@@ -224,7 +216,7 @@ body {
 }
 #planetRingInsideOne {
   background-color: #007DB7;
-  transform: scale(0.65);
+  transform: scale(0.6);
   position: fixed;
   height: 9em;
   width: 9em;
@@ -233,7 +225,7 @@ body {
 }
 #planetRingInsideTwo {
   background-color: #172A89;
-  transform: scale(0.75);
+  transform: scale(0.7);
   position: fixed;
   height: 9em;
   width: 9em;
@@ -242,7 +234,7 @@ body {
 }
 #planetRingInsideThree {
   background-color: #0C2454;
-  transform: scale(0.85);
+  transform: scale(0.8);
   position: fixed;
   height: 9em;
   width: 9em;
@@ -251,10 +243,27 @@ body {
 }
 #planetRingInsideFour {
   background-color: #3B4D60;
-  transform: scale(0.95);
+  transform: scale(0.9);
   position: fixed;
   height: 9em;
   width: 9em;
   z-index: 0;
   border-radius: 50%;
+}
+#cloudOne{
+  background-color: red;
+  height: 9em;
+  width: 9em;
+  position: fixed;
+  z-index: 5;
+  transform-origin: center;
+  animation: loaderAnimCloudRotate 18s reverse linear infinite;
+}
+@keyframes loaderAnimCloudRotate {
+  0% {
+    transform: rotate(0deg) scale(0.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.1);
+  }
 }
