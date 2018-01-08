@@ -251,19 +251,74 @@ body {
   border-radius: 50%;
 }
 #cloudOne{
-  background-color: red;
-  height: 9em;
-  width: 9em;
+  background-color: #FFFFFD;
+  height: 1.5em;
+  width: 1.5em;
   position: fixed;
   z-index: 5;
-  transform-origin: center;
-  animation: loaderAnimCloudRotate 18s reverse linear infinite;
+  border-radius: 25%;
+  animation: loaderAnimCloudRotate 4.5s linear infinite;
+  transform-origin: 300% 300%;
+}
+#cloudTwo{
+  background-color: #FFFFFD;
+  height: 1.5em;
+  width: 1.5em;
+  position: fixed;
+  z-index: 5;
+  border-radius: 25%;
+  animation: loaderAnimCloudRotate 4.5s linear infinite;
+  animation-delay: -2.25s;
+  transform-origin: 300% 800%;
+}
+#cloudThree{
+  background-color: #FFFFFD;
+  height: 1.5em;
+  width: 1.5em;
+  position: fixed;
+  z-index: 5;
+  border-radius: 25%;
+  animation: loaderAnimCloudTwoRotate 4.5s linear infinite;
+  animation-delay: -2.25s;
+  transform-origin: 300% 300%;
+}
+#cloudFour{
+  background-color: #FFFFFD;
+  height: 1.5em;
+  width: 1.5em;
+  position: fixed;
+  z-index: 5;
+  border-radius: 25%;
+  animation: loaderAnimCloudTwoRotate 4.5s linear infinite;
+  transform-origin: 800% 300%;
 }
 @keyframes loaderAnimCloudRotate {
   0% {
-    transform: rotate(0deg) scale(0.1);
+    transform: rotateY(0deg) scale(0.5);
   }
   100% {
-    transform: rotate(360deg) scale(0.1);
+    transform: rotateY(360deg) scale(0.5);
   }
 }
+@keyframes loaderAnimCloudTwoRotate {
+  0% {
+    transform: rotateX(0deg) scale(0.5);
+  }
+  100% {
+    transform: rotateX(360deg) scale(0.5);
+  }
+}
+
+/* #testingBoxOne {
+  background-color: red;
+  width: 1.5em;
+  height: 1.5em;
+  animation: loaderAnimThree 2s alternate infinite ease-in-out;
+}
+#testingBoxTwo {
+  background-color: black;
+  width: 1.5em;
+  height: 1.5em;
+  animation: loaderAnimThree 2s reverse infinite ease-in-out;
+  transform-origin: 300% 100%
+} */
